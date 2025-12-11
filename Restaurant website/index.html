@@ -4,11 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurent</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://cdn.boxicons.com/3.0.4/fonts/animations.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
     <header class="header">
-    <h1 class="header_title">Resta <span>urant</span></h1>
+    <h1 class="header_title">Resta<span>urant</span></h1>
     <ul class="header_menus">
         <li><a href="#home">Home</a></li>
         <li><a href="#menu">Menu</a></li>
@@ -23,15 +25,124 @@
              <h1 class="section-home_title">Welcome to <span>Restaurant</span>, where Flavor Lives!</h1> 
              <div class="section-home_buttons">
                 <button class="primary-button">Contact us</button>
-                <button class="light-button">Explore</button>
+                <button class="light-button hover-icon-right">
+                Explore
+                <i class="fa-solid fa-angles-right"></i>
+            </button>
              </div>
          </div>
-         <img class="section-home_image" src="images/padthai-shrimp-white-dish-with-lime-eggs-wooden-table.jpg" alt="Pad Thai">
+         <img class="section-home_image" src="images/pad-thai.png" alt="Pad Thai">
+    </section>
+
+  <!-- SECTION MENUS -->
+    <section class="section-menus section-menu" id="menus">
+      <h1 class="section-title">Our<span>Menus</span></h1>
+      <p class="section-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, error pariatur? Dicta, 
+        eligendi ea molestiae quisquam omnis, ad quos nostrum, placeat tempore suscipit quae ab.
+    </p>
+            <div class="section-menus_cards">
+                <!-- CARD 1 -->
+                <div class="section-menus_card">
+                <img class="section-menus_card-image" src="images/roasted-chicken.png" alt="roasted chicken">
+                    <h3 class="section-menus_card-title">roasted Chicken</h3>
+                    <div class="section-menus_card-rating">
+                    <i class='bxl  bx-trustpilot'></i> 
+                    <i class='bxl  bx-trustpilot'></i> 
+                    <i class='bxl  bx-trustpilot'></i> 
+                    <i class='bxl  bx-trustpilot'></i> 
+                        <span>4.3</span>
+                    </div>
+                    <div class="section-menus_card-footer">
+                        <h2 class="section-menus_card-price">$3.98</h2>
+                            <button class="section-menus_card-button--buy primary-button">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                    </div>
+                </div>
+            </div>
+
+             <div class="section-menus_cards">
+                <!-- CARD 2 -->
+                <div class="section-menus_card">
+                <img class="section-menus_card-image" src="images/seafood-noodles.png" alt="roasted chicken">
+                    <h3 class="section-menus_card-title">Seafood Noodles</h3>
+                    <div class="section-menus_card-rating">
+                    <i class='bxl  bx-trustpilot'></i> 
+                    <i class='bxl  bx-trustpilot'></i> 
+                    <i class='bxl  bx-trustpilot'></i> 
+                    <i class='bxl  bx-trustpilot'></i> 
+                        <span>5.0</span>
+                    </div>
+                    <div class="section-menus_card-footer">
+                        <h2 class="section-menus_card-price">$4.98</h2>
+                            <button class="section-menus_card-button--buy primary-button">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                    </div>
+                </div>
+            </div>
+
+             <div class="section-menus_cards">
+                <!-- CARD 3 -->
+                <div class="section-menus_card">
+                <img class="section-menus_card-image" src="images/grilled-shrimp.png" alt="roasted chicken">
+                    <h3 class="section-menus_card-title">grilled Shrimp</h3>
+                    <div class="section-menus_card-rating">
+                    <i class='bxl  bx-trustpilot'></i> 
+                    <i class='bxl  bx-trustpilot'></i> 
+                    <i class='bxl  bx-trustpilot'></i> 
+                    <i class='bxl  bx-trustpilot'></i> 
+                        <span>3.9</span>
+                    </div>
+                    <div class="section-menus_card-footer">
+                        <h2 class="section-menus_card-price">$7.49</h2>
+                            <button class="section-menus_card-button--buy primary-button">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                    </div>
+                </div>
+            </div>
     </section>
 
 
-    <section class="section-menus section-menu" id="menu">
+    <!-- SECTION-ABOUT  -->
 
-    </section>
+     <section id="about" class="section-about section-menu">
+        <img class="section-about_image"  src="images/pasta.png" alt="Pasta">
+      <div class="section-about_content">
+        <h1 class="section-title">About <span>Us</span></h1>
+        <p class="section-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quis cum quasi voluptatum ratione maxime consequuntur vitae quam autem? Alias.
+
+        </p>
+        <div class="section-about_stats">
+            <div class="section-about_stat">
+                <h1 class="section-about_stat-number">3+</h1>
+                <div class="section-about_stat-text">
+                    <span class="section-about_stat-desc">Years of</span>
+                    <h3 class="section-about_stat-title">EXPERIENCE</h3>
+                </div>
+            </div>
+            <div class="section-about_stat">
+                <h1 class="section-about_stat-number">15</h1>
+                <div class="section-about_stat-text">
+                    <span class="section-about_stat-desc">Best</span>
+                    <h3 class="section-about_stat-title">FOODS</h3>
+
+                </div>
+            </div>
+        </div>
+
+        <button class="primary-button hover-icon-right">
+            Learn More
+           <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <img class="section-about_image-background-1" src="images/seafood-noodles.png" alt="SeaFood Noodles">
+     </section>
+ 
+    <!-- END SECTION - ABOUT  -->
+
+
 </body>
 </html>
