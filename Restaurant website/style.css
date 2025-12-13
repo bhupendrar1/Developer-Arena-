@@ -100,7 +100,8 @@ transform: translateX(4px);
     font-size: 18px;
     color: var(--secondary-color);
     font-weight: 500;
-
+    width: 100%;
+    
   }
 
 .text-field::placeholder {
@@ -538,3 +539,124 @@ color: white;
 
 /*END FOOTER*/
 
+
+.header_menu-toggle{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+
+    /* COMPONENTS */
+  .section-menu {
+   padding-block: 50px;
+   
+  }
+
+    /* END COMPONENTS */
+
+    /*HEADER*/
+.header_menu-toggle{
+ display: block;
+ font-size: 3rem;
+ cursor: pointer;   
+}
+
+.header_menu-toggle .bx-x {
+    display: none;
+ }
+
+.header_menus{
+    position: absolute;
+    top: 100px;
+    background: linear-gradient(to right, white, var(--background-primary-color));
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+    padding-inline-start: 5%;
+     height: 0;
+     overflow: hidden;
+     transition: 300ms ease;
+
+}
+
+.header_menus.active {
+    height: 300px;
+    padding-block: 24px;
+}
+
+.header_menus.active~.header_menu-toggle .bx-menu {
+    display: none;
+}
+
+.header_menus.active~.header_menu-toggle .bx-x {
+ display: block;
+
+}
+   
+
+/*END HEADER*/
+
+
+    /*SECTION HOME*/
+.section-home {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-top: 130px;
+}
+.section-home_image{
+    max-width: 250px;
+
+}
+
+.section-home_title {
+    font-size: 2rem;
+    width: 100%;
+
+}
+
+
+    /*END SECTION HOME*/
+
+    
+     /* SECTION-ABOUT  */
+
+.section-about{
+    flex-direction: column-reverse;
+}
+
+.section-about_image-background-2 {
+    display: none;
+}
+
+ /* END SECTION ABOUT */
+
+   /* SECTION SERVICES */
+.section-services_cards{
+    flex-direction: column;
+}
+    
+   /* END SECTION SERVICES */
+    
+
+   /*SECTION CONTACT*/
+ 
+   .section-contact {
+    grid-template-columns: repeat(1, 1fr);
+   }
+
+   /* END SECTION CONTACT */
+
+    /* FOOTER */
+
+    .footer_menus {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .footer_copyright {
+        text-align: center;
+
+    }
+   /* END FOOTER */
+}

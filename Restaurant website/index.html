@@ -13,22 +13,29 @@
     <h1 class="header_title">Resta<span>urant</span></h1>
     <ul class="header_menus">
         <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
+        <li><a href="#menus">Menus</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+    
+    <div class="header_menu-toggle">
+        <i class="fa-solid fa-list"></i>
+        <i class="fa-solid fa-x"></i>
+    </div>
     </header>
 
+
+    <!-- SECTION : HOME -->
     <section id="home" class="section-home section-menu">
          <div class="section-home_content">
              <h1 class="section-home_title">Welcome to <span>Restaurant</span>, where Flavor Lives!</h1> 
              <div class="section-home_buttons">
                 <button class="primary-button">Contact us</button>
-                <button class="light-button hover-icon-right">
+                <a href="#menus" class="light-button hover-icon-right">
                 Explore
                 <i class="fa-solid fa-angles-right"></i>
-            </button>
+                </a>
              </div>
          </div>
          <img class="section-home_image" src="images/pad-thai.png" alt="Pad Thai">
@@ -147,8 +154,7 @@
 
 
     <!-- SECTION SERVICE -->
-   
-    <section class="section-service section-menu" id="">
+    <section class="section-services section-menu" id="services">
       <h1 class="section-title">Our <span>Services</span></h1>
       <p class="section-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ratione illum ea vitae sit eligendi error? Nemo aliquam autem quae.  
       </p>
@@ -262,4 +268,15 @@
           <!-- END FOOTER -->
 
 </body>
+<script>
+const headerMenuToggle = document.querySelector('.header_menu-toggle')
+const headerMenus = document.querySelector('.header_menus');
+
+
+headerMenuToggle.addEventListener('click', () => {
+headerMenus.classList.toggle('active');
+}) 
+
+
+</script>
 </html>
