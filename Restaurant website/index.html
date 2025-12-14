@@ -198,7 +198,7 @@
                         <div class="section-contact_info-item-icon">
                             <i class="fa-solid fa-map-pin"></i>
                         </div>
-                        <a class="section-contact_info-item-link" href="#">
+                        <a class="section-contact_info-item-link" href="#contact">
                             Restaurant Street, Connaught Place , New Delhi , 110001 , India
                         </a>
                     </div>
@@ -268,15 +268,82 @@
           <!-- END FOOTER -->
 
 </body>
+<script src="https://unpkg.com/scrollreveal"></script>
 <script>
+        ScrollReveal({
+         reset: true,
+          delay: 300,
+          distance: '60px',
+          duration: 1500,
+
+        });
+
+    //COMPONENTS 
+    ScrollReveal().reveal('.section-title');
+    ScrollReveal().reveal('.section-desc', {
+   delay: 600,
+   duration: 2500
+    }); 
+    
+
+    // SECTION HOME
+ScrollReveal().reveal('.section-home_title'); 
+ScrollReveal().reveal('.section-home_image' ,{
+    origin: 'right'
+});  
+ScrollReveal().reveal('.section-home_buttons', {
+ delay: 600
+});  
+
+// SECTION MENUS
+ScrollReveal().reveal('.section-menus_card', {
+    interval: 300
+}); 
+
+// SECTION ABOUT
+ScrollReveal().reveal('.section-about_image', {
+    delay: 900,
+    origin: 'left'
+}); 
+
+ ScrollReveal().reveal('.section-about_stat', {
+    delay: 1200,
+    interval: 300
+ });
+
+ ScrollReveal().reveal('.section-about .primary-button', {
+    duration: 3000,
+    delay: 1200
+ });
+
+ /// SECTION SERVICES
+
+  ScrollReveal().reveal('.section-services_card' ,{
+    delay: 1200,
+    interval: 300
+});
+
+// SECTION CONTACT
+
+ ScrollReveal().reveal('.section-contact_info-item', {
+    delay: 1200,
+    interval: 300
+ });
+
+ScrollReveal().reveal('.section-contact_form' , {
+    delay: 1800,
+    duration: 3000
+});
+
+</script>
+<script>
+
 const headerMenuToggle = document.querySelector('.header_menu-toggle')
 const headerMenus = document.querySelector('.header_menus');
-
 
 headerMenuToggle.addEventListener('click', () => {
 headerMenus.classList.toggle('active');
 }) 
-
 
 </script>
 </html>

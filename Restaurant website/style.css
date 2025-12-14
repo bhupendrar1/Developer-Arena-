@@ -187,9 +187,11 @@ z-index: 1;
     align-items: center;
     background: linear-gradient(to right,
                white, var(--background-primary-color));
-               gap: 80px;
-               min-height: 100dvh;   
-               justify-content: space-between;          
+     gap: 80px;
+    min-height: 100dvh;   
+   /* justify-content: space-between;           */
+   flex-wrap: wrap-reverse;
+   justify-content: center;
 }
 
 .section-home_title {
@@ -212,6 +214,7 @@ z-index: 1;
 
 .section-home_image {
     width:90%;
+    min-width: 250px;
   max-width: 400px;
   
 }
@@ -544,6 +547,9 @@ color: white;
     display: none;
 }
 
+
+
+
 @media screen and (max-width: 768px){
 
     /* COMPONENTS */
@@ -592,12 +598,10 @@ color: white;
  display: block;
 
 }
-   
-
 /*END HEADER*/
 
 
-    /*SECTION HOME*/
+ /*SECTION HOME*/
 .section-home {
     flex-direction: column-reverse;
     justify-content: center;
@@ -615,7 +619,7 @@ color: white;
 }
 
 
-    /*END SECTION HOME*/
+/*END SECTION HOME*/
 
     
      /* SECTION-ABOUT  */
@@ -647,7 +651,6 @@ color: white;
    /* END SECTION CONTACT */
 
     /* FOOTER */
-
     .footer_menus {
         flex-wrap: wrap;
         justify-content: center;
@@ -656,7 +659,8 @@ color: white;
 
     .footer_copyright {
         text-align: center;
-
     }
+
+
    /* END FOOTER */
 }
