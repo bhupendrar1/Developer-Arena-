@@ -227,13 +227,50 @@ z-index: 1;
     text-align: center;
 }
 
+.section-menus_filters {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.menu-filter-button {
+    padding: 6px 14px;
+    border-radius: var(--small-radius);
+    border: 2px solid var(--border-primary-color);
+    background: white;
+    color: var(--secondary-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 200ms ease, color 200ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+
+.menu-filter-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.menu-filter-button.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.section-menus_layout {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    align-items: flex-start;
+}
+
 .section-menus_cards {
-    margin-top: 64px;
+    margin-top: 24px;
     display: flex;
     justify-content: center;
-    gap: 64px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    gap: 32px;
+    flex-wrap: wrap;
 }
 
 .section-menus_card {
@@ -242,18 +279,16 @@ z-index: 1;
     border-radius: var(--mediusm-radius);
     display: flex;
     flex-direction: column;
-      align-items: center;
-      height: 240px;
-      justify-content: end;
-      margin-top: 0;
-      cursor: pointer;
-      padding: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0;
+    cursor: pointer;
+    padding: 24px;
 }
 
 .section-menus_card:hover {
     background: var(--primary-color);
     color: white;
-    margin-top: 55px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -261,8 +296,24 @@ z-index: 1;
     width: 150PX;
 }
 
+/* Special styling for dessert image */
+.section-menus_card[data-name="Strawberry Sundae"] .section-menus_card-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFF7F0;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
 .section-menus_card-title{
     font-size: 24px;
+    margin-top: 8px;
+}
+
+.section-menus_card-desc {
+    font-size: 14px;
+    text-align: center;
     margin-top: 8px;
 }
 
@@ -298,6 +349,53 @@ margin-top: 14px;
 .section-menus_card-button--buy {
     border-radius: var(--large-radius);
 }
+
+.section-menus_selection {
+    border-radius: var(--mediusm-radius);
+    background: white;
+    border: 2px dashed var(--border-primary-color);
+    padding: 20px;
+}
+
+.section-menus_selection-title {
+    font-size: 22px;
+    color: var(--secondary-color);
+    margin-bottom: 4px;
+}
+
+.section-menus_selection-subtitle {
+    font-size: 14px;
+    color: var(--gray-color);
+    margin-bottom: 12px;
+}
+
+.section-menus_selection-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.section-menus_selection-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.section-menus_selection-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.section-menus_selection-hint {
+    font-size: 12px;
+    color: var(--gray-color);
+    margin-top: 8px;
+}
+
  /* END SECTION MENUS */
 
 
@@ -428,6 +526,67 @@ background: var(--transparent-025);
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
 }
+
+/* SECTION BOOKING */
+.section-booking {
+  display: grid;
+  grid-template-columns: 1.2fr 1.4fr;
+  gap: 40px;
+  background: linear-gradient(to right, white, var(--background-primary-color));
+}
+
+.section-booking_highlights {
+  margin-top: 16px;
+  padding-left: 20px;
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-booking_highlights li::marker {
+  color: var(--primary-color);
+}
+
+.section-booking_form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-booking_form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.section-booking_field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: var(--secondary-color);
+}
+
+.section-booking_submit {
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.section-booking_message {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--secondary-color);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.section-booking_message.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* END SECTION BOOKING */
 
   .section-contact .section-title {
   color: white;
@@ -646,6 +805,24 @@ color: white;
  
    .section-contact {
     grid-template-columns: repeat(1, 1fr);
+   }
+
+   /* SECTION MENUS */
+   .section-menus_layout {
+    grid-template-columns: 1fr;
+   }
+
+   .section-menus_selection {
+    order: -1;
+   }
+
+   .section-menus_cards {
+    justify-content: flex-start;
+   }
+
+   /* SECTION BOOKING */
+   .section-booking {
+    grid-template-columns: 1fr;
    }
 
    /* END SECTION CONTACT */

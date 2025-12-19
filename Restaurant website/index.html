@@ -10,19 +10,20 @@
 </head>
 <body>
     <header class="header">
-    <h1 class="header_title">Resta<span>urant</span></h1>
-    <ul class="header_menus">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#menus">Menus</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    
-    <div class="header_menu-toggle">
-        <i class="fa-solid fa-list"></i>
-        <i class="fa-solid fa-x"></i>
-    </div>
+        <h1 class="header_title">Resta<span>urant</span></h1>
+        <ul class="header_menus">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menus">Menus</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="header_menu-toggle">
+            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-x"></i>
+        </div>
     </header>
 
 
@@ -43,72 +44,98 @@
 
 <!-- SECTION MENUS -->
     <section class="section-menus section-menu" id="menus">
-    <h1 class="section-title">Our<span>Menus</span></h1>
-    <p class="section-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, error pariatur? Dicta, 
-        eligendi ea molestiae quisquam omnis, ad quos nostrum, placeat tempore suscipit quae ab.
-    </p>
+        <h1 class="section-title">Our <span>Menu</span></h1>
+        <p class="section-desc">Browse our signature dishes and add your favourites to your booking. You can filter by category to quickly find what you crave.</p>
+
+        <div class="section-menus_filters">
+            <button class="menu-filter-button active" data-category="all">All</button>
+            <button class="menu-filter-button" data-category="starter">Starters</button>
+            <button class="menu-filter-button" data-category="main">Mains</button>
+            <button class="menu-filter-button" data-category="dessert">Desserts</button>
+        </div>
+
+        <div class="section-menus_layout">
             <div class="section-menus_cards">
-                <!-- CARD 1 -->
-                <div class="section-menus_card">
-                <img class="section-menus_card-image" src="images/roasted-chicken.png" alt="roasted chicken">
-                    <h3 class="section-menus_card-title">roasted Chicken</h3>
+                <!-- CARD 1 – STARTER -->
+                <div class="section-menus_card" data-category="starter" data-name="Bruschetta Platter" data-price="2.49">
+                    <img class="section-menus_card-image" src="images/pasta.png" alt="Bruschetta platter">
+                    <h3 class="section-menus_card-title">Bruschetta Platter</h3>
                     <div class="section-menus_card-rating">
-                    <i class='bxl  bx-trustpilot'></i>
-                    <i class='bxl  bx-trustpilot'></i>
-                    <i class='bxl  bx-trustpilot'></i>
-                    <i class='bxl  bx-trustpilot'></i>
+                        <i class='bxl bx-trustpilot'></i>
+                        <i class='bxl bx-trustpilot'></i>
+                        <i class='bxl bx-trustpilot'></i>
+                        <span>4.5</span>
+                    </div>
+                    <p class="section-menus_card-desc">
+                        Crispy toasted bread topped with tomatoes, basil and a drizzle of balsamic glaze.
+                    </p>
+                    <div class="section-menus_card-footer">
+                        <h2 class="section-menus_card-price">$2.49</h2>
+                        <button class="section-menus_card-button--book primary-button" type="button">
+                            <i class="fa-solid fa-plus"></i>
+                            Add to booking
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 2 – MAIN -->
+                <div class="section-menus_card" data-category="main" data-name="Roasted Chicken" data-price="3.98">
+                    <img class="section-menus_card-image" src="images/roasted-chicken.png" alt="Roasted chicken">
+                    <h3 class="section-menus_card-title">Roasted Chicken</h3>
+                    <div class="section-menus_card-rating">
+                        <i class='bxl bx-trustpilot'></i>
+                        <i class='bxl bx-trustpilot'></i>
+                        <i class='bxl bx-trustpilot'></i>
+                        <i class='bxl bx-trustpilot'></i>
                         <span>4.3</span>
                     </div>
+                    <p class="section-menus_card-desc">
+                        Herb marinated chicken roasted to perfection, served with seasonal vegetables.
+                    </p>
                     <div class="section-menus_card-footer">
                         <h2 class="section-menus_card-price">$3.98</h2>
-                            <button class="section-menus_card-button--buy primary-button">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
+                        <button class="section-menus_card-button--book primary-button" type="button">
+                            <i class="fa-solid fa-plus"></i>
+                            Add to booking
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 3 – DESSERT -->
+                <div class="section-menus_card" data-category="dessert" data-name="Strawberry Sundae" data-price="1.99">
+                    <img class="section-menus_card-image" src="images/soda.jpg" alt="Strawberry sundae">
+                    <h3 class="section-menus_card-title">Strawberry Sundae</h3>
+                    <div class="section-menus_card-rating">
+                        <i class='bxl bx-trustpilot'></i>
+                        <i class='bxl bx-trustpilot'></i>
+                        <i class='bxl bx-trustpilot'></i>
+                        <i class='bxl bx-trustpilot'></i>
+                        <span>4.7</span>
+                    </div>
+                    <p class="section-menus_card-desc">
+                        Creamy vanilla ice cream topped with strawberry sauce, fresh fruit and crunchy nuts.
+                    </p>
+                    <div class="section-menus_card-footer">
+                        <h2 class="section-menus_card-price">$1.99</h2>
+                        <button class="section-menus_card-button--book primary-button" type="button">
+                            <i class="fa-solid fa-plus"></i>
+                            Add to booking
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <div class="section-menus_cards">
-                <!-- CARD 2 -->
-                <div class="section-menus_card">
-                <img class="section-menus_card-image" src="images/seafood-noodles.png" alt="roasted chicken">
-                    <h3 class="section-menus_card-title">Seafood Noodles</h3>
-                    <div class="section-menus_card-rating">
-                    <i class='bxl  bx-trustpilot'></i>
-                    <i class='bxl  bx-trustpilot'></i>
-                    <i class='bxl  bx-trustpilot'></i>
-                    <i class='bxl  bx-trustpilot'></i>
-                        <span>5.0</span>
-                    </div>
-                    <div class="section-menus_card-footer">
-                        <h2 class="section-menus_card-price">$4.98</h2>
-                            <button class="section-menus_card-button--buy primary-button">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-                    </div>
+            <aside class="section-menus_selection">
+                <h2 class="section-menus_selection-title">Your selection</h2>
+                <p class="section-menus_selection-subtitle">Dishes you add here will be included in your booking request.</p>
+                <ul class="section-menus_selection-list" id="bookingSelectionList"></ul>
+                <div class="section-menus_selection-total">
+                    <span>Total (approx.)</span>
+                    <strong id="bookingSelectionTotal">$0.00</strong>
                 </div>
-            </div>
-
-            <div class="section-menus_cards">
-                <!-- CARD 3 -->
-                <div class="section-menus_card">
-                <img class="section-menus_card-image" src="images/grilled-shrimp.png" alt="roasted chicken">
-                    <h3 class="section-menus_card-title">grilled Shrimp</h3>
-                    <div class="section-menus_card-rating">
-                    <i class='bxl  bx-trustpilot'></i>
-                    <i class='bxl  bx-trustpilot'></i>
-                    <i class='bxl  bx-trustpilot'></i>
-                    <i class='bxl  bx-trustpilot'></i
-                        <span>3.9</span>
-                    </div>
-                    <div class="section-menus_card-footer">
-                        <h2 class="section-menus_card-price">$7.49</h2>
-                            <button class="section-menus_card-button--buy primary-button">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-                    </div>
-                </div>
-            </div>
+                <p class="section-menus_selection-hint">You can still change your order at the restaurant. This just helps us prepare better.</p>
+            </aside>
+        </div>
     </section>
 
 
@@ -118,8 +145,13 @@
         <img class="section-about_image"  src="images/pasta.png" alt="Pasta">
     <div class="section-about_content">
         <h1 class="section-title">About <span>Us</span></h1>
-        <p class="section-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quis cum quasi voluptatum ratione maxime consequuntur vitae quam autem? Alias.
-
+        <p class="section-desc">
+            At Restaurant, we bring together comforting classics and bold flavours from around the world.
+            Every dish is prepared fresh in our open kitchen using seasonal ingredients and homemade sauces.
+        </p>
+        <p class="section-desc">
+            Whether you are dropping in for a quick lunch, a family dinner or a late-night dessert,
+            our team is focused on warm hospitality, fast service and food that makes you want to come back.
         </p>
         <div class="section-about_stats">
             <div class="section-about_stat">
@@ -132,8 +164,8 @@
             <div class="section-about_stat">
                 <h1 class="section-about_stat-number">15</h1>
                 <div class="section-about_stat-text">
-                    <span class="section-about_stat-desc">Best</span>
-                    <h3 class="section-about_stat-title">FOODS</h3>
+                    <span class="section-about_stat-desc">Signature</span>
+                    <h3 class="section-about_stat-title">DISHES</h3>
 
                 </div>
             </div>
@@ -156,7 +188,8 @@
     <!-- SECTION SERVICE -->
     <section class="section-services section-menu" id="services">
     <h1 class="section-title">Our <span>Services</span></h1>
-    <p class="section-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ratione illum ea vitae sit eligendi error? Nemo aliquam autem quae.  
+    <p class="section-desc">
+        From relaxed dinners to celebrations, we offer flexible services so you can enjoy our food the way you like.
     </p>
     <div class="section-services_cards">
         <div class="section-services_card">
@@ -164,29 +197,95 @@
                 <i class="fa-solid fa-bowl-rice"></i>
             </div>
             <h1 class="section-services_card-title">Dine-In Service</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>
+                Cozy seating, attentive staff and a calm ambiance perfect for families, friends and business meetings.
+            </p>
         </div>
         <div class="section-services_card">
             <div class="section-services_card-icon">
                 <i class="fa-solid fa-box-open"></i>
             </div>
             <h1 class="section-services_card-title">Takeaway & Delivery</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>
+                Freshly packed meals delivered to your door, or ready for quick pickup when you are on the move.
+            </p>
         </div>
         <div class="section-services_card">
             <div class="section-services_card-icon">
                 <i class="fa-regular fa-calendar"></i>
             </div>
             <h1 class="section-services_card-title">Event & Catering</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>
+                Custom menus and full-service catering for birthdays, corporate gatherings and special celebrations.
+            </p>
         </div>
     </div>
     </section>
 
     <!-- END SECTION - SERVICE -->
 
+    <!-- SECTION BOOKING -->
+    <section class="section-booking section-menu" id="booking">
+        <div class="section-booking_info">
+            <h1 class="section-title">Table <span>Booking</span></h1>
+            <p class="section-desc">Reserve your table in advance and let us know when you are arriving. We will confirm your reservation by phone or email.</p>
+            <ul class="section-booking_highlights">
+                <li>Instant booking request in under a minute</li>
+                <li>Choose your preferred date, time and guests</li>
+                <li>Add dishes from the menu so we can prepare in advance</li>
+            </ul>
+        </div>
+
+        <form class="section-booking_form" id="bookingForm">
+            <div class="section-booking_form-row">
+                <div class="section-booking_field">
+                    <label for="bookingName">Full name</label>
+                    <input id="bookingName" name="name" type="text" class="text-field" placeholder="Your name" required>
+                </div>
+                <div class="section-booking_field">
+                    <label for="bookingPhone">Phone number</label>
+                    <input id="bookingPhone" name="phone" type="tel" class="text-field" placeholder="Phone number" required>
+                </div>
+            </div>
+
+            <div class="section-booking_form-row">
+                <div class="section-booking_field">
+                    <label for="bookingEmail">Email (optional)</label>
+                    <input id="bookingEmail" name="email" type="email" class="text-field" placeholder="you@example.com">
+                </div>
+                <div class="section-booking_field">
+                    <label for="bookingGuests">Guests</label>
+                    <input id="bookingGuests" name="guests" type="number" min="1" max="20" class="text-field" placeholder="2" required>
+                </div>
+            </div>
+
+            <div class="section-booking_form-row">
+                <div class="section-booking_field">
+                    <label for="bookingDate">Date</label>
+                    <input id="bookingDate" name="date" type="date" class="text-field" required>
+                </div>
+                <div class="section-booking_field">
+                    <label for="bookingTime">Time</label>
+                    <input id="bookingTime" name="time" type="time" class="text-field" required>
+                </div>
+            </div>
+
+            <div class="section-booking_field">
+                <label for="bookingNotes">Special requests</label>
+                <textarea id="bookingNotes" name="notes" class="text-field  text-field--textarea" rows="4" placeholder="Allergies, celebrations, seating preferences..."></textarea>
+            </div>
+
+            <button class="section-booking_submit primary-button hover-icon-right" type="submit">
+                Book now
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p class="section-booking_message" id="bookingMessage"></p>
+        </form>
+    </section>
+
         <!-- SECTION CONTACT -->
-        <section class="section-contact section-menu" id="conatct">
+        <section class="section-contact section-menu" id="contact">
             <div class="section-contact_info">
                 <h1 class="section-title">Contact <span>Us</span></h1>
                 <p class="section-desc">Lorem ipsum dolor sit amet consectetur 
@@ -257,6 +356,7 @@
                 <li class="footer_menus-menu"><a href="#menus">Menus</a></li>
                 <li class="footer_menus-menu"><a href="#about">About</a></li>
                 <li class="footer_menus-menu"><a href="#services">Services</a></li>
+                <li class="footer_menus-menu"><a href="#booking">Booking</a></li>
                 <li class="footer_menus-menu"><a href="#contact">Contact</a></li>
             </ul> 
     
@@ -337,13 +437,124 @@ ScrollReveal().reveal('.section-contact_form' , {
 
 </script>
 <script>
-
-const headerMenuToggle = document.querySelector('.header_menu-toggle')
+const headerMenuToggle = document.querySelector('.header_menu-toggle');
 const headerMenus = document.querySelector('.header_menus');
 
-headerMenuToggle.addEventListener('click', () => {
-headerMenus.classList.toggle('active');
-})
+if (headerMenuToggle) {
+    headerMenuToggle.addEventListener('click', () => {
+        headerMenus.classList.toggle('active');
+    });
+}
 
+// MENU FILTERING
+const filterButtons = document.querySelectorAll('.menu-filter-button');
+const menuCards = document.querySelectorAll('.section-menus_card');
+
+filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+
+        filterButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        menuCards.forEach((card) => {
+            const cardCategory = card.getAttribute('data-category');
+            if (category === 'all' || cardCategory === category) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+// BOOKING SELECTION FROM MENU
+const bookingSelectionList = document.getElementById('bookingSelectionList');
+const bookingSelectionTotal = document.getElementById('bookingSelectionTotal');
+
+function formatCurrency(value) {
+    return '$' + value.toFixed(2);
+}
+
+function updateBookingTotal() {
+    const items = bookingSelectionList ? bookingSelectionList.querySelectorAll('li') : [];
+    let total = 0;
+
+    items.forEach((item) => {
+        const price = parseFloat(item.getAttribute('data-price') || '0');
+        const quantity = parseInt(item.getAttribute('data-quantity') || '1', 10);
+        total += price * quantity;
+    });
+
+    if (bookingSelectionTotal) {
+        bookingSelectionTotal.textContent = formatCurrency(total);
+    }
+}
+
+function addItemToBooking(name, price) {
+    if (!bookingSelectionList) return;
+
+    const existingItem = bookingSelectionList.querySelector(`li[data-name="${name}"]`);
+
+    if (existingItem) {
+        const quantity = parseInt(existingItem.getAttribute('data-quantity') || '1', 10) + 1;
+        existingItem.setAttribute('data-quantity', String(quantity));
+        const label = existingItem.querySelector('.booking-item-label');
+        if (label) {
+            label.textContent = `${name} x${quantity}`;
+        }
+    } else {
+        const li = document.createElement('li');
+        li.className = 'section-menus_selection-item';
+        li.setAttribute('data-name', name);
+        li.setAttribute('data-price', String(price));
+        li.setAttribute('data-quantity', '1');
+
+        li.innerHTML = `
+            <span class="booking-item-label">${name} x1</span>
+            <span class="booking-item-price">${formatCurrency(price)}</span>
+        `;
+
+        bookingSelectionList.appendChild(li);
+    }
+
+    updateBookingTotal();
+}
+
+const addToBookingButtons = document.querySelectorAll('.section-menus_card-button--book');
+addToBookingButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const card = button.closest('.section-menus_card');
+        if (!card) return;
+
+        const name = card.getAttribute('data-name') || 'Selected dish';
+        const price = parseFloat(card.getAttribute('data-price') || '0');
+
+        addItemToBooking(name, price);
+    });
+});
+
+// BOOKING FORM HANDLING
+const bookingForm = document.getElementById('bookingForm');
+const bookingMessage = document.getElementById('bookingMessage');
+
+if (bookingForm) {
+    bookingForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(bookingForm);
+        const name = formData.get('name');
+        const date = formData.get('date');
+        const time = formData.get('time');
+        const guests = formData.get('guests');
+
+        if (bookingMessage) {
+            bookingMessage.textContent = `Thank you, ${name}! Your booking request for ${guests} guest(s) on ${date} at ${time} has been received. We will contact you shortly to confirm.`;
+            bookingMessage.classList.add('visible');
+        }
+
+        bookingForm.reset();
+    });
+}
 </script>
 </html>
